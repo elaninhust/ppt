@@ -1,0 +1,22 @@
+{
+  "name": "ppt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodeppt start -p 8090"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elaninhust/ppt.git"
+  },
+  "author": "Elan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elaninhust/ppt/issues"
+  },
+  "homepage": "https://github.com/elaninhust/ppt#readme",
+  "devDependencies": {
+    "nodeppt": "^1.4.5"
+  }
+}
