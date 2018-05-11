@@ -1,5 +1,5 @@
 {
-  "name": "ppt",
+  "name": "位运算符的奇淫技巧",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/elaninhust/ppt.git"
+    "url": ""
   },
   "author": "Elan",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/elaninhust/ppt/issues"
+    "url": ""
   },
-  "homepage": "https://github.com/elaninhust/ppt#readme",
+  "homepage": "",
   "devDependencies": {
     "nodeppt": "^1.4.5"
   }

@@ -135,5 +135,13 @@ var num2 = ~num1;
 # 要不要使用位运算符
 ====
 
+## 边界问题
 
+> 1.令 expr 为解释执行 UnaryExpression 的结果。
+> 
+> 2.令 oldValue 为 ToInt32(GetValue(expr))。
+
+====
+
+## 速度问题
 [/magic]

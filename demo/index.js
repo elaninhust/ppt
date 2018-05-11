@@ -1,7 +1,3 @@
-//`>>>`不可对负数取整,无符号右移会把负数的二进制码当成正数的二进制码，由于负数是以其绝对值的二进制补码形式表示的，会导致无符号右移后的结果非常之大
-//https://github.com/Aaaaaaaty/Blog/issues/22
-
-
 /**
  * 判断正整数n是否是2的整数幂
  */
@@ -23,8 +19,12 @@ var rIndex = Math.random() * len | 0
 
 
 /**
- * [left-pad] (https://www.npmjs.com/package/left-pad)
- * (https://github.com/stevemao/left-pad/pull/11)
+ * 字符串前面拼指定字符到固定长度
+ * [left-pad]
+ * [git] https://www.npmjs.com/package/left-pad
+ * [PR] https://github.com/stevemao/left-pad/pull/11
+ * 
+ * [DEMO] leftpad('hello',20,'1')，就要返回'111111111111111hello'
  */
 
 function leftpad (str, len, ch) {
@@ -41,6 +41,26 @@ function leftpad (str, len, ch) {
   }
 
   return str;
+}
+
+/**
+ * 找出数组中和为n的所有组合
+ * 穷举法，复杂度O(N*2^N)
+ */
+
+function combinations(array, n) {
+  var lists = [],
+      M = 1 << array.length; //2^arr.length次方，获得所有组合的个数
+  for (var i = 1; i < M; ++i) {
+      var sublist = array.filter(function(c, k) {
+          return i >> k & 1
+      });
+      if (sublist.reduce(function(p, c) {
+              return p + c
+          }, 0) === n)
+          lists.push(sublist);
+  }
+  return lists;
 }
 
 
@@ -67,3 +87,29 @@ function RGBToHex(rgb) {
     var color = rgbArr[1]<<16 | rgbArr[2]<<8 | rgbArr[3]
     return '#'+ color.toString(16)
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
